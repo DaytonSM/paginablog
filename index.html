@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos adicionales para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            .letter {
+                width: 90%;
+                max-width: 400px;
+            }
+            .heart-button {
+                font-size: 24px;
+            }
+            .heart-background {
+                display: none;
+            }
+        }
+    </style>
+    <style>
+        /* Estilos para el contenedor principal */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('papel_carta.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Estilo para el papel de la carta */
+        .letter {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #ff0066;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            display: none;
+            position: relative;
+        }
+
+        /* Estilo para el botón de corazón */
+        .heart-button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        /* Estilo para el icono de corazón */
+        .heart-icon {
+            font-size: 48px;
+            color: #ff0066;
+        }
+
+        /* Estilo para la firma (nombre) en la esquina inferior derecha */
+        .signature {
+            position: absolute;
+            bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+            right: 10px; /* Ajusta la distancia desde la derecha */
+        }
+
+        /* Estilo para el mensaje */
+        .message {
+            margin-bottom: 20px; /* Espacio entre el mensaje y la firma */
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de corazón para abrir la carta -->
+    <button class="heart-button" onclick="openLetter()" id="heartButton">
+        <span class="heart-icon">&#10084;</span>
+    </button>
+    
+    <!-- Contenedor principal para la carta de amor -->
+    <div class="letter" id="loveLetter">
+        <div class="header">
+            Hola escribo esto para ti 
+        </div>
+        <div class="message">
+            Querido amor,
+
+            Aunque puedas parecer fría en ocasiones, he descubierto que tienes un corazón cálido y generoso que brilla cuando se le da la oportunidad. 
+            Eres como una obra de arte en sí misma, estoy emocionado/a de conocerte más a medida que avanzamos en esta hermosa travesía juntos. 
+            Por fa ya no seas muy fria conmigo, no se cuanto mas te espere para que me desmuestres tu amor y cariño... para ser sincero volveria hacerlo... 
+            esperaria por ese cariño tuyo, sin necesidad de forzar que salga de tu corazon... 
+            yo te quiero mucho a decir verdad no me importa mucho como es tu actitud... 
+        </div>
+        <div class="signature">Dayton Suclupe</div>
+    </div>
+
+    <script>
+        function openLetter() {
+            var letter = document.getElementById("loveLetter");
+            letter.style.display = "block";
+            
+            // Ocultar el botón de corazón después de hacer clic en él
+            var heartButton = document.getElementById("heartButton");
+            heartButton.style.display = "none";
+        }
+    </script>
+</body>
+</html>
